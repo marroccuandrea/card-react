@@ -9,10 +9,11 @@ const Card = () => {
         <div className="card">
             <img src={img} alt={`${alt}`} />
             <h6>10 € Amazon</h6>
+            <hr />
             <p>2,16 €</p>
             <p>bamby0000</p>
         </div>
-        <p className='card-time'>RIAPRE PRESTO</p>
+        <p className="card-time">RIAPRE PRESTO</p>
         <button>{prezzo} €</button>
     </article>
   )
