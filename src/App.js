@@ -20,8 +20,14 @@ function App() {
     <div className="App">
       <h1>La mia prima Card</h1>
       {/* <Product nome="mario" zona="rossa" /> */}
-      <Product nome={primaCard.nome} prezzo={primaCard.prezzo} prezzoFinale={primaCard.prezzoFinale} img={primaCard.img} utente={primaCard.utente}/>
-      <Product nome={secondaCard.nome} prezzo={secondaCard.prezzo} prezzoFinale={secondaCard.prezzoFinale} img={secondaCard.img} utente={secondaCard.utente}/>
+      <Product {...primaCard}/> {/* Spread operator (versione corta del passaggio qui sotto) */}
+      {/* <Product 
+      nome={primaCard.nome} 
+      prezzo={primaCard.prezzo} 
+      prezzoFinale={primaCard.prezzoFinale} 
+      img={primaCard.img} 
+      utente={primaCard.utente}/> */}
+      <Product {...secondaCard}/>
     </div>
   );
 }

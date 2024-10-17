@@ -1,26 +1,40 @@
 import React from 'react'
-// const prezzo = '10'
-// const alt = 'valore'
-// const img = "https://a71eba0458acf57331d3-d31ce5ebd093935dff8526660841b743.ssl.cf2.rackcdn.com/products/f20099.jpg"
 
 const Product = (props) => {
-//  console.log(props.nome);
- 
+//  console.log(props);
+ // Destrutturazione oggetto (non serve mettere props. davanti al dato che mi serve stampare)
+ const {prezzoFinale, nome, img, prezzo, utente} = props;
   return (
     <article>
         <div className="card">
-            <img src={props.img} alt={`${props.nome}`} />
-            <h6>{props.nome}</h6>
+            <img src={img} alt={`${nome}`} />
+            <h6>{nome}</h6>
             <hr />
-            <p>{props.prezzo} €</p>
-            <p>{props.nome}</p>
-            <p style={{textTransform: 'uppercase'}}>{props.utente}</p>
+            <p>{prezzo} €</p>
+            <p>{nome}</p>
+            <p style={{textTransform: 'uppercase'}}>{utente}</p>
             <p className="card-time">RIAPRE PRESTO</p>
-          <button>{props.prezzoFinale} €</button>
+          <button>{prezzoFinale} €</button>
         </div>
         
     </article>
   )
+  // Oggetto non destrutturato (props.nome ecc..)
+  // return (
+  //   <article>
+  //       <div className="card">
+  //           <img src={img} alt={`${props.nome}`} />
+  //           <h6>{props.nome}</h6>
+  //           <hr />
+  //           <p>{props.prezzo} €</p>
+  //           <p>{props.nome}</p>
+  //           <p style={{textTransform: 'uppercase'}}>{props.utente}</p>
+  //           <p className="card-time">RIAPRE PRESTO</p>
+  //         <button>{props.prezzoFinale} €</button>
+  //       </div>
+        
+  //   </article>
+  // )
 }
 
 export default Product
