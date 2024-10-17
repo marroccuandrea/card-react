@@ -1,7 +1,9 @@
 import React from 'react'
 
+// Destrutturazione migliore oggetto
+// const Product = ({prezzoFinale, nome, img, prezzo, utente})
 const Product = (props) => {
-//  console.log(props);
+
  // Destrutturazione oggetto (non serve mettere props. davanti al dato che mi serve stampare)
  const {prezzoFinale, nome, img, prezzo, utente} = props;
   return (
@@ -19,6 +21,9 @@ const Product = (props) => {
         
     </article>
   )
+}
+
+
   // Oggetto non destrutturato (props.nome ecc..)
   // return (
   //   <article>
@@ -35,6 +40,6 @@ const Product = (props) => {
         
   //   </article>
   // )
-}
+
 
 export default Product
